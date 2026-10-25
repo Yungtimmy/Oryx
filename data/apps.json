@@ -97,5 +97,79 @@
     "verified": true,
     "watchUrl": null,
     "crest": "/crests/injara-crest.png"
+  },
+  {
+    "id": "injector",
+    "name": "Injector",
+    "initial": "In",
+    "job": "Scan ports, CAs, and eco onboarding on Telegram.",
+    "difficulty": "easy",
+    "paths": [
+      "first-trade"
+    ],
+    "cats": [
+      "DeFi"
+    ],
+    "reward": "Eco check",
+    "gasInj": 0,
+    "url": "https://t.me/InjpulseBot",
+    "verified": true,
+    "watchUrl": null,
+    "crest": "/crests/injector-crest.png"
+  },
+  {
+    "id": "nox",
+    "name": "Nox",
+    "initial": "N",
+    "job": "Private trading on Injective (beta).",
+    "difficulty": "medium",
+    "paths": [
+      "first-trade"
+    ],
+    "cats": [
+      "Trading",
+      "DeFi"
+    ],
+    "reward": "First private trade",
+    "gasInj": 0.01,
+    "url": "https://noxapp.pro/",
+    "verified": true,
+    "watchUrl": null
+  },
+  {
+    "id": "renzu",
+    "name": "Renzu",
+    "initial": "Re",
+    "job": "Decode any Injective tx, wallet, token, or whale from chain data.",
+    "difficulty": "easy",
+    "paths": [
+      "first-trade"
+    ],
+    "cats": [
+      "DeFi"
+    ],
+    "reward": "First decode",
+    "gasInj": 0,
+    "url": "https://renzu.xyz/",
+    "verified": true,
+    "watchUrl": null
+  },
+  {
+    "id": "talis",
+    "name": "Talis",
+    "initial": "T",
+    "job": "NFT marketplace on Injective.",
+    "difficulty": "medium",
+    "paths": [
+      "launch-token"
+    ],
+    "cats": [
+      "Launch"
+    ],
+    "reward": "First mint or buy",
+    "gasInj": 0.013,
+    "url": "https://injective.talis.art/",
+    "verified": true,
+    "watchUrl": null
   }
 ]
