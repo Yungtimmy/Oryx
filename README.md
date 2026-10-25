@@ -10,7 +10,8 @@ npm run dev
 
 ## Structure
 - `data/apps.json`: the app list (edit this to add apps)
-- `lib/currency.ts`: placeholder FX/INJ rates (estimates only)
+- `data/fx.json` + `lib/currency.ts`: placeholder FX/INJ rates (estimates only)
+- Design system: Frontend Dev handoff (DESIGN_SYSTEM.md), Instrument Serif / DM Sans / IBM Plex Mono
 - `components/`: Hero, PathChips, AppCard, StarterPath, SafetyStrip, Footer
 
 ## Day-one apps

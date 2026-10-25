@@ -1,7 +1,7 @@
 [
-  {"id":"helix","name":"Helix","job":"Trade spot and perps on an on-chain order book.","path":["first-trade"],"difficulty":"Beginner","gasInj":0.0002,"url":"https://helixapp.com","watchUrl":"TODO","logo":"/logos/helix.png","verified":true},
-  {"id":"sprout","name":"Sprout","job":"Lend and borrow assets to earn yield.","path":["earn-yield"],"difficulty":"Intermediate","gasInj":0.0003,"url":"https://sprout.finance","watchUrl":"TODO","logo":"/logos/sprout.png","verified":false},
-  {"id":"runup","name":"RunUp","job":"Launch and trade new tokens.","path":["launch-token"],"difficulty":"Intermediate","gasInj":0.0004,"url":"TODO","watchUrl":"TODO","logo":"/logos/runup.png","verified":false},
-  {"id":"hydro","name":"Hydro","job":"Liquid-stake INJ and keep earning.","path":["earn-yield"],"difficulty":"Beginner","gasInj":0.0003,"url":"https://hydroprotocol.finance","watchUrl":"TODO","logo":"/logos/hydro.png","verified":false},
-  {"id":"injara","name":"Injara","job":"Cash out crypto to local African currency.","path":["cash-out"],"difficulty":"Beginner","gasInj":0.0002,"url":"TODO","watchUrl":"TODO","logo":"/logos/injara.png","verified":false}
+  {"id":"helix","name":"Helix","initial":"H","job":"Trade spot, perps, and on-chain stocks on an order book.","difficulty":"medium","paths":["first-trade"],"gasInj":0.01,"url":"https://helixapp.com","verified":true,"watchUrl":null},
+  {"id":"sprout","name":"Sprout","initial":"S","job":"Fair-launch tokens on a bonding curve, then graduate to a DEX pool.","difficulty":"easy","paths":["launch-token"],"gasInj":0.008,"url":"https://sprout.fun","verified":true,"watchUrl":null},
+  {"id":"runup","name":"RunUp","initial":"R","job":"Launch a token with a stock-perp treasury strategy behind it.","difficulty":"medium","paths":["launch-token"],"gasInj":0.02,"url":"https://runup.fun","verified":true,"watchUrl":null},
+  {"id":"hydro","name":"Hydro","initial":"Hy","job":"Liquid-stake INJ, then lend, farm, or loop yield.","difficulty":"hard","paths":["earn-yield"],"gasInj":0.015,"url":null,"candidateUrl":"https://hydro.finance","note":"hydro.finance returned 503 Service Suspended on 2026-10-25; link disabled until confirmed","verified":false,"watchUrl":null},
+  {"id":"injara","name":"Injara","initial":"Ij","job":"Buy and sell INJ for naira on Telegram.","difficulty":"easy","paths":["cash-out"],"gasInj":0,"url":null,"candidateUrl":"https://t.me/InjaraX","note":"t.me/InjaraX shows no profile on 2026-10-25; TODO confirm handle","verified":false,"watchUrl":null,"africaOfframp":true}
 ]
