@@ -280,5 +280,5 @@
   .rules a { text-decoration: underline; }
   .market .label { display: block; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin: 0 4px 8px; }
   @media (prefers-reduced-motion: reduce) { .mission, .btn { transition: none; } }
-  .crest b img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .crest b img { width: 100%; height: 100%; object-fit: contain; display: block; }
   .crest b:has(img) { padding-bottom: 0; }
