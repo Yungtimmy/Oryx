@@ -8,6 +8,11 @@
     "paths": [
       "first-trade"
     ],
+    "cats": [
+      "Trading",
+      "DeFi"
+    ],
+    "reward": "First trade",
     "gasInj": 0.01,
     "url": "https://helixapp.com",
     "verified": true,
@@ -20,8 +25,13 @@
     "job": "Fair-launch tokens on a bonding curve, then graduate to a DEX pool.",
     "difficulty": "easy",
     "paths": [
+      "earn-yield",
       "launch-token"
     ],
+    "cats": [
+      "Launch"
+    ],
+    "reward": "First launch",
     "gasInj": 0.008,
     "url": "https://sprout.fun",
     "verified": true,
@@ -36,6 +46,11 @@
     "paths": [
       "launch-token"
     ],
+    "cats": [
+      "Launch",
+      "DeFi"
+    ],
+    "reward": "Token live",
     "gasInj": 0.02,
     "url": "https://runup.fun",
     "verified": true,
@@ -50,6 +65,11 @@
     "paths": [
       "earn-yield"
     ],
+    "cats": [
+      "Lending",
+      "DeFi"
+    ],
+    "reward": "Yield on",
     "gasInj": 0.015,
     "url": "https://app.hydroprotocol.finance/",
     "verified": true,
@@ -64,12 +84,14 @@
     "paths": [
       "cash-out"
     ],
+    "cats": [
+      "Cash out"
+    ],
+    "reward": "Naira out",
     "gasInj": 0,
     "url": null,
-    "candidateUrl": "https://t.me/InjaraX",
-    "note": "t.me/InjaraX shows no profile on 2026-10-25; TODO confirm handle",
     "verified": false,
     "watchUrl": null,
-    "africaOfframp": true
+    "note": "Bot username unconfirmed. Keep locked."
   }
 ]

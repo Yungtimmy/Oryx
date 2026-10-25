@@ -22,35 +22,35 @@
     min-height: 100vh;
     position: relative;
   }
-  /* subtle geometric night-market weave */
   body::before {
     content: "";
-    position: fixed; inset: 0; pointer-events: none; z-index: 0;
-    opacity: 0.07;
+    position: fixed; inset: 0; pointer-events: none; z-index: 0; opacity: 0.06;
     background-image:
-      repeating-linear-gradient(0deg, var(--gold) 0 2px, transparent 2px 28px),
-      repeating-linear-gradient(90deg, var(--saffron) 0 2px, transparent 2px 28px),
-      repeating-linear-gradient(45deg, var(--clay) 0 1px, transparent 1px 40px);
+      repeating-linear-gradient(0deg, var(--gold) 0 2px, transparent 2px 32px),
+      repeating-linear-gradient(90deg, var(--saffron) 0 2px, transparent 2px 32px);
     mix-blend-mode: screen;
   }
-  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 22px 64px; position: relative; z-index: 1; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 22px 72px; position: relative; z-index: 1; }
 
   header {
     display: flex; align-items: center; justify-content: space-between;
-    padding: 22px 0 10px;
+    padding: 22px 0 8px;
   }
   .brand { display: flex; align-items: center; gap: 12px; }
-  .brand img { width: 40px; height: 40px; border-radius: 50%; box-shadow: 0 0 0 2px var(--gold); }
-  .brand .name { font-weight: 800; font-size: 20px; letter-spacing: -0.03em; }
-  .brand .name b { color: var(--gold); font-weight: 800; }
+  .brand img {
+    width: 44px; height: 44px; border-radius: 50%;
+    object-fit: cover; box-shadow: 0 0 0 2px var(--gold);
+  }
+  .brand .name { font-weight: 800; font-size: 22px; letter-spacing: -0.03em; }
+  .brand .name b { color: var(--gold); }
   .badge-live {
     font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
-    color: var(--night); background: var(--gold); padding: 6px 10px; border-radius: 999px;
+    color: var(--night); background: var(--gold); padding: 7px 12px; border-radius: 999px;
   }
 
-  .hero { padding: 36px 0 28px; }
+  .hero { padding: 32px 0 20px; }
   .eyebrow {
-    display: inline-flex; align-items: center; gap: 8px;
+    display: inline-flex; align-items: center; gap: 10px;
     font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
     color: var(--gold); margin-bottom: 14px;
   }
@@ -66,19 +66,16 @@
     line-height: 1.05;
     max-width: 16ch;
   }
-  .hero h1 em {
-    font-style: italic; font-weight: 400; color: var(--gold);
-  }
-  .hero p { color: var(--dust); margin-top: 14px; max-width: 40ch; font-size: 16px; font-weight: 500; }
+  .hero h1 em { font-style: italic; font-weight: 400; color: var(--gold); }
+  .hero p { color: var(--dust); margin-top: 14px; max-width: 42ch; font-size: 16px; font-weight: 500; }
 
   .market {
-    margin-top: 28px;
+    margin-top: 26px;
     background: var(--stall);
     border: 1px solid var(--line);
     border-radius: 16px;
     padding: 10px 12px 12px;
     display: inline-block;
-    box-shadow: inset 0 1px 0 rgba(224,179,90,0.08);
   }
   .market .label {
     display: block; font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
@@ -94,102 +91,129 @@
   }
   .market button:active { transform: scale(0.98); }
 
-  .lanes { display: flex; flex-wrap: wrap; gap: 10px; padding: 28px 0 22px; }
-  .lane {
+  .filters { padding: 26px 0 8px; }
+  .filters .label {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--dust); margin-bottom: 10px;
+  }
+  .filter-row { display: flex; flex-wrap: wrap; gap: 8px; }
+  .filter {
     border: 1px solid var(--line); background: var(--stall);
-    color: var(--dust); border-radius: 14px;
-    padding: 10px 14px 10px 10px; font-size: 13px; font-weight: 700; cursor: pointer;
-    display: inline-flex; align-items: center; gap: 8px;
+    color: var(--dust); border-radius: 999px;
+    padding: 9px 14px; font-size: 13px; font-weight: 700; cursor: pointer;
   }
-  .lane .ico {
-    width: 28px; height: 28px; border-radius: 8px;
-    background: var(--stall-2); display: grid; place-items: center;
-    font-size: 14px; border: 1px solid var(--line);
-  }
-  .lane[aria-pressed="true"] {
+  .filter[aria-pressed="true"] {
     border-color: var(--gold); color: var(--snow);
-    background: color-mix(in srgb, var(--gold) 12%, var(--stall));
+    background: color-mix(in srgb, var(--gold) 14%, var(--stall));
   }
-  .lane:active { transform: scale(0.98); }
+  .filter:active { transform: scale(0.98); }
 
-  .grid { display: grid; gap: 16px; grid-template-columns: 1fr; }
-  @media (min-width: 720px) { .grid { grid-template-columns: 1fr 1fr; } }
+  .lanes { display: flex; flex-wrap: wrap; gap: 8px; padding: 14px 0 22px; }
+  .lane {
+    border: 1px solid transparent; background: transparent;
+    color: var(--dust); border-radius: 10px;
+    padding: 6px 4px; font-size: 12px; font-weight: 700; cursor: pointer;
+    display: inline-flex; align-items: center; gap: 6px;
+    border-bottom: 2px solid transparent;
+  }
+  .lane[aria-pressed="true"] { color: var(--snow); border-bottom-color: var(--gold); }
+  .lane .ico { color: var(--gold); }
+
+  .grid {
+    display: grid; gap: 16px;
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 860px) {
+    .grid { grid-template-columns: 1fr 1fr; }
+  }
 
   .mission {
-    background: var(--stall);
-    border: 1px solid var(--line);
-    border-radius: 18px;
-    padding: 0;
-    overflow: hidden;
-    position: relative;
-    display: flex; flex-direction: column;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+    --notch: radial-gradient(circle at 0 50%, transparent 7px, black 7.5px);
+    background:
+      repeating-linear-gradient(45deg, color-mix(in srgb, var(--gold) 4%, transparent) 0 1px, transparent 1px 14px),
+      var(--stall);
+    border: 1px solid var(--line); border-radius: 18px;
+    display: grid; grid-template-columns: 96px 1fr; min-height: 200px;
+    position: relative; overflow: hidden;
+    box-shadow: 0 16px 34px rgba(8,5,3,0.55), inset 0 1px 0 color-mix(in srgb, var(--gold) 14%, transparent);
+    -webkit-mask: radial-gradient(circle 7px at 0 22px, transparent 98%, black) 0 0/100% 26px repeat-y;
+    mask: radial-gradient(circle 7px at 0 22px, transparent 98%, black) 0 0/100% 26px repeat-y;
+    transition: border-color 160ms ease, transform 160ms ease;
   }
-  .mission::before {
-    content: "";
-    position: absolute; left: 0; right: 0; top: 0; height: 4px;
-    background: linear-gradient(90deg, var(--gold), var(--saffron), var(--clay));
+  .mission::before { /* kente ribbon */
+    content: ""; position: absolute; left: 0; right: 0; top: 0; height: 7px; z-index: 2;
+    background:
+      repeating-linear-gradient(90deg, var(--gold) 0 14px, var(--night) 14px 16px, var(--clay) 16px 26px, var(--night) 26px 28px, var(--leaf) 28px 34px, var(--night) 34px 36px, var(--saffron) 36px 44px, var(--night) 44px 46px);
+    opacity: 0.85;
   }
-  .mission-top {
-    padding: 18px 18px 12px;
-    display: flex; gap: 14px; align-items: flex-start;
+  .mission:hover { border-color: color-mix(in srgb, var(--gold) 55%, var(--line)); transform: scale(0.985); }
+  .mission:active { transform: scale(0.975); }
+  .mission-rail {
+    background:
+      conic-gradient(from 45deg at 50% 50%, color-mix(in srgb, var(--gold) 9%, transparent) 25%, transparent 0 50%, color-mix(in srgb, var(--gold) 9%, transparent) 0 75%, transparent 0) 0 0/14px 14px,
+      var(--stall-2);
+    border-right: 2px dashed color-mix(in srgb, var(--gold) 30%, var(--line));
+    display: flex; flex-direction: column; align-items: center; justify-content: space-between;
+    padding: 22px 8px 14px; box-shadow: inset -10px 0 18px rgba(8,5,3,0.35);
   }
   .crest {
-    width: 52px; height: 52px; border-radius: 14px;
-    background: var(--stall-2);
-    border: 2px solid var(--line);
-    display: grid; place-items: center;
-    font-family: var(--font-serif), serif; font-weight: 700; font-size: 20px; color: var(--gold);
-    flex-shrink: 0;
-    box-shadow: inset 0 0 0 1px rgba(224,179,90,0.15);
+    width: 58px; height: 66px; display: grid; place-items: center; padding-bottom: 6px;
+    clip-path: polygon(50% 0, 100% 14%, 100% 58%, 50% 100%, 0 58%, 0 14%);
+    background: var(--gold);
   }
-  .mission h3 {
-    font-family: var(--font-serif), serif; font-size: 22px; font-weight: 600;
-    letter-spacing: -0.02em; line-height: 1.15;
-  }
-  .mission .job { color: var(--dust); font-size: 14px; margin-top: 4px; font-weight: 500; }
-  .meta {
-    padding: 0 18px 14px;
-    display: flex; flex-wrap: wrap; gap: 8px; align-items: center;
+  .crest b {
+    width: 52px; height: 60px; display: grid; place-items: center;
+    clip-path: polygon(50% 0, 100% 14%, 100% 58%, 50% 100%, 0 58%, 0 14%);
+    background: var(--night); font: 700 21px/1 var(--font-serif), serif; color: var(--gold); padding-bottom: 8px;
   }
   .seal {
-    font-size: 11px; font-weight: 800; letter-spacing: 0.06em;
-    text-transform: uppercase; padding: 5px 9px; border-radius: 999px;
-    border: 1px solid currentColor;
+    --c: var(--leaf);
+    width: 64px; height: 64px; border-radius: 50%; display: grid; place-items: center; text-align: center;
+    background: radial-gradient(circle at 35% 30%, color-mix(in srgb, var(--c) 80%, var(--snow)) 0 10%, var(--c) 45%, color-mix(in srgb, var(--c) 55%, var(--night)) 100%);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--c) 70%, var(--night)), 0 6px 10px rgba(8,5,3,0.6), inset 0 -4px 6px rgba(8,5,3,0.35), inset 0 3px 4px color-mix(in srgb, var(--snow) 30%, transparent);
+    transform: rotate(-8deg); color: var(--night);
   }
-  .seal.r1 { color: var(--leaf); }
-  .seal.r2 { color: var(--saffron); }
-  .seal.r3 { color: var(--clay); }
-  .gas {
-    font-family: var(--font-mono), monospace; font-size: 12px; color: var(--dust);
-  }
-  .warn {
-    font-size: 10px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase;
-    color: var(--clay); border: 1px solid color-mix(in srgb, var(--clay) 50%, transparent);
-    padding: 3px 7px; border-radius: 6px;
-  }
-  .actions {
-    margin-top: auto; padding: 12px 14px 14px;
-    display: flex; gap: 8px;
-    background: color-mix(in srgb, var(--stall-2) 70%, transparent);
-    border-top: 1px dashed var(--line);
-  }
-  .btn {
-    height: 42px; border-radius: 12px; padding: 0 14px;
-    font: 800 13px/1 var(--font-sans), sans-serif; border: 0; cursor: pointer;
-    display: inline-flex; align-items: center; justify-content: center;
-    letter-spacing: 0.02em;
-  }
+  .seal i { display: block; width: 50px; height: 50px; border-radius: 50%; border: 1.5px dashed color-mix(in srgb, var(--night) 45%, transparent); display: grid; place-items: center; font: 800 8px/1.1 var(--font-sans), sans-serif; letter-spacing: 0.12em; font-style: normal; }
+  .seal i strong { display: block; font: 700 18px/1 var(--font-serif), serif; letter-spacing: 0; }
+  .seal.r2 { --c: var(--saffron); } .seal.r3 { --c: var(--clay); }
+  .mission-body { padding: 18px 16px 14px; display: flex; flex-direction: column; gap: 9px; position: relative; }
+  .serial { font: 600 10.5px/1 var(--font-mono), monospace; color: var(--gold); letter-spacing: 0.1em;
+    border: 1px solid color-mix(in srgb, var(--gold) 40%, transparent); padding: 3px 6px; border-radius: 4px; }
+  .top { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+  .cats { display: contents; }
+  .cat { font-size: 10px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: var(--dust);
+    border: 1px solid var(--line); padding: 3px 8px; border-radius: 999px; }
+  .mission h3 { font-family: var(--font-serif), serif; font-size: 25px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.1; }
+  .pips { display: flex; gap: 5px; margin-top: 5px; }
+  .pips span { width: 8px; height: 8px; transform: rotate(45deg); border: 1px solid color-mix(in srgb, var(--gold) 45%, transparent); }
+  .pips span.on { background: var(--gold); border-color: var(--gold); }
+  .job { color: var(--dust); font-size: 13.5px; font-weight: 500; max-width: 38ch; }
+  .loot-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+  .loot { display: inline-flex; align-items: center; gap: 7px; background: var(--gold); color: var(--night);
+    border-radius: 999px; padding: 5px 12px 5px 9px; font-weight: 800; font-size: 12px; box-shadow: inset 0 -2px 0 color-mix(in srgb, var(--clay) 50%, transparent); }
+  .loot small { font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.7; }
+  .entry { font: 500 11.5px/1 var(--font-mono), monospace; color: var(--dust); border: 1px dashed var(--line); padding: 5px 8px; border-radius: 6px; }
+  .entry b { color: var(--snow); font-weight: 600; }
+  .warn { font-size: 10px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--clay);
+    border: 1px solid color-mix(in srgb, var(--clay) 50%, transparent); padding: 3px 7px; border-radius: 6px; }
+  .ctrail { display: flex; align-items: center; gap: 6px; font: 600 10px/1 var(--font-mono), monospace; color: var(--dust); letter-spacing: 0.08em; }
+  .ctrail span { width: 9px; height: 10px; clip-path: polygon(50% 0, 100% 15%, 100% 60%, 50% 100%, 0 60%, 0 15%); background: var(--line); }
+  .ctrail span.on { background: var(--gold); }
+  .actions { display: flex; gap: 8px; width: 100%; margin-top: auto; }
+  .btn { height: 40px; border-radius: 12px; padding: 0 14px; font: 800 13px/1 var(--font-sans), sans-serif; border: 0; cursor: pointer;
+    display: inline-flex; align-items: center; justify-content: center; transition: transform 120ms ease; }
   .btn:active { transform: scale(0.98); }
-  .btn-enter { background: var(--ocean); color: var(--snow); flex: 1.2; }
+  .btn-enter { background: var(--ocean); color: var(--snow); flex: 1.3; }
   .btn-enter:hover { background: var(--ocean-dim); }
-  .btn-enter[disabled], .btn-replay[disabled] {
-    opacity: 0.35; pointer-events: none;
-  }
-  .btn-replay {
-    background: transparent; color: var(--dust);
-    border: 1px solid var(--line); flex: 1;
-  }
+  .btn-enter[disabled], .btn-replay[disabled] { opacity: 0.35; pointer-events: none; }
+  .btn-replay { background: transparent; color: var(--dust); border: 1px solid var(--line); flex: 1; }
+  .stamp { position: absolute; z-index: 3; pointer-events: none; font: 800 22px/1 var(--font-sans), sans-serif; letter-spacing: 0.22em;
+    padding: 6px 14px; border: 3px double currentColor; border-radius: 6px; transform: rotate(-14deg); opacity: 0.85; }
+  .stamp.locked { color: var(--clay); right: 18px; top: 16px; }
+  .stamp.cleared { color: var(--leaf); right: 14px; top: 14px; }
+  .mission.locked .mission-body > :not(.stamp) { opacity: 0.6; }
+  .mission.cleared { border-color: color-mix(in srgb, var(--leaf) 55%, var(--line)); }
+  .mission.cleared .btn-enter { background: transparent; color: var(--leaf); border: 1px solid var(--leaf); }
 
   .section { padding: 44px 0 8px; }
   .section h2 {
@@ -197,18 +221,14 @@
     font-size: 30px; letter-spacing: -0.02em; margin-bottom: 6px;
   }
   .section .sub { color: var(--dust); font-size: 14px; margin-bottom: 18px; font-weight: 500; }
-
-  .trail {
-    display: grid; gap: 12px; grid-template-columns: 1fr;
-    position: relative;
-  }
+  .trail { display: grid; gap: 12px; grid-template-columns: 1fr; position: relative; }
   @media (min-width: 720px) {
     .trail { grid-template-columns: repeat(4, 1fr); }
     .trail::before {
       content: "";
       position: absolute; top: 36px; left: 8%; right: 8%; height: 2px;
       background: repeating-linear-gradient(90deg, var(--gold) 0 8px, transparent 8px 16px);
-      opacity: 0.45; z-index: 0;
+      opacity: 0.4; z-index: 0;
     }
   }
   .node {
@@ -231,17 +251,14 @@
     border: 1px solid var(--line);
     border-radius: 16px;
     padding: 20px 22px;
-    position: relative;
-    overflow: hidden;
+    position: relative; overflow: hidden;
   }
   .rules::before {
     content: "";
     position: absolute; left: 0; top: 0; bottom: 0; width: 5px;
     background: linear-gradient(180deg, var(--gold), var(--saffron), var(--clay));
   }
-  .rules h3 {
-    font-family: var(--font-serif), serif; font-size: 20px; font-weight: 600; margin-bottom: 8px;
-  }
+  .rules h3 { font-family: var(--font-serif), serif; font-size: 20px; font-weight: 600; margin-bottom: 8px; }
   .rules ul { padding-left: 18px; color: var(--dust); font-size: 13px; font-weight: 500; }
   .rules li { margin: 5px 0; }
   .rules a { color: var(--gold); font-weight: 700; }
@@ -256,16 +273,10 @@
     color: var(--gold); font-weight: 800; display: block; margin-bottom: 6px;
     font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
   }
-  footer a:hover { color: var(--snow); }
   .note { color: var(--dust); font-size: 12px; margin: 14px 0 0; font-family: var(--font-mono), monospace; }
 
-  .kente { height: 8px; border-radius: 2px; opacity: .8;
-    background: repeating-linear-gradient(90deg, var(--gold) 0 14px, var(--night) 14px 18px, var(--clay) 18px 26px, var(--night) 26px 30px, var(--saffron) 30px 36px, var(--night) 36px 40px); }
-  .mission { transition: transform .2s ease, box-shadow .2s ease; }
-  .mission:hover { transform: translateY(-2px); box-shadow: 0 16px 36px rgba(0,0,0,0.45); }
-  .lane[aria-pressed="true"] { animation: pulse 2.4s ease-in-out infinite; }
-  @keyframes pulse { 0%,100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--gold) 0%, transparent); } 50% { box-shadow: 0 0 0 4px color-mix(in srgb, var(--gold) 18%, transparent); } }
-  @media (prefers-reduced-motion: reduce) { .lane[aria-pressed="true"] { animation: none; } .mission:hover { transform: none; } }
   a { color: inherit; text-decoration: none; }
   a[aria-disabled="true"] { opacity: .35; pointer-events: none; }
   .rules a { text-decoration: underline; }
+  .market .label { display: block; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin: 0 4px 8px; }
+  @media (prefers-reduced-motion: reduce) { .mission, .btn { transition: none; } }
