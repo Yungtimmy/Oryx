@@ -93,10 +93,9 @@
     ],
     "reward": "Naira out",
     "gasInj": 0,
-    "url": null,
-    "verified": false,
+    "url": "https://t.me/Injarap2pbot",
+    "verified": true,
     "watchUrl": null,
-    "note": "Bot username unconfirmed. Keep locked.",
     "crest": "/crests/injara-crest.png"
   }
 ]

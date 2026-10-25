@@ -10,7 +10,7 @@ const RANK = { easy: ["r1", "I"], medium: ["r2", "II"], hard: ["r3", "III"] } as
 const ICON: Record<PathId, string> = { "first-trade": "↗", "earn-yield": "◎", "launch-token": "✶", "cash-out": "⇄" };
 const trail = [["Get a wallet","Keplr or Leap. Phrase stays offline."],["Fund it","Bridge or buy a little INJ."],["First mission","Start with Helix or Sprout."],["Cash out","INJ to naira via Injara."]];
 // TODO: confirm official URLs before enabling the null ones.
-const footer: [string, [string, string | null][]][] = [["Cash out",[["Injara community","https://t.me/injaratg"]]],["Bots",[["InjpulseBot",null]]],["Community",[["Injective Africa Telegram",null],["Discord",null]]]];
+const footer: [string, [string, string | null][]][] = [["Cash out",[["Injara community","https://t.me/injaratg"]]],["Bots",[["InjpulseBot","https://t.me/InjpulseBot"]]],["Community",[["Injective Africa Telegram",null],["Discord",null]]]];
 
 function L({ href, children, className }: { href: string | null; children: React.ReactNode; className?: string }) {
   return href ? <a className={className} href={href} target="_blank" rel="noopener noreferrer">{children}</a>
