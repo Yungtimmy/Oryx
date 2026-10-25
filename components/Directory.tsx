@@ -27,7 +27,7 @@ export default function Directory() {
 
   return (<div className="wrap">
     <header>
-      <div className="brand"><img src="/oryx-logo-A.jpg" alt="Oryx" width={44} height={44} /><div className="name">Oryx <b>Africa</b></div></div>
+      <div className="brand"><img src="/oryx-mark-C.svg" alt="Oryx" width={44} height={44} /><div className="name">Oryx <b>Africa</b></div></div>
     </header>
     <section className="hero">
       <div className="eyebrow">Injective from the continent</div>
