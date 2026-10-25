@@ -67,7 +67,7 @@ export default function Directory() {
             <div className="loot-row">
               <span className="loot">◆ <small>Reward</small> {a.reward}</span>
               <span className="entry">Entry <b>{gasLabel(ccy, a.gasInj)}</b></span>
-              {!open && <span className="warn">Link unconfirmed</span>}
+              {!open && <span className="warn">Link pending</span>}
             </div>
             <div className="ctrail">Trail {stop}/4 {LANES.map((l, i) => <span key={l} className={i < stop ? "on" : ""} />)}</div>
             <div className="actions">
