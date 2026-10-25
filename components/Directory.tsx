@@ -28,7 +28,6 @@ export default function Directory() {
   return (<div className="wrap">
     <header>
       <div className="brand"><img src="/oryx-logo-A.jpg" alt="Oryx" width={44} height={44} /><div className="name">Oryx <b>Africa</b></div></div>
-      <div className="badge-live">Night market</div>
     </header>
     <section className="hero">
       <div className="eyebrow">Injective from the continent</div>
@@ -88,6 +87,6 @@ export default function Directory() {
       <li>Check the URL before you connect.</li>
       <li>Read <a href="https://docs.injective.network" target="_blank" rel="noopener noreferrer">Injective docs</a> before bridging sizeable funds.</li>
     </ul></aside>
-    <footer>{footer.map(([h, ls]) => <div key={h}><strong>{h}</strong>{ls.map(([nm, u], i) => <span key={nm}>{i > 0 && " · "}<L href={u}>{nm}</L></span>)}</div>)}</footer>
+    <footer>{footer.map(([h, ls]) => <div key={h}><strong>{h}</strong><div className="footer-links">{ls.map(([nm, u]) => <L key={nm} href={u}>{nm}</L>)}</div></div>)}</footer>
   </div>);
 }
