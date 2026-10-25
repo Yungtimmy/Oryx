@@ -1,0 +1,19 @@
+/* Placeholder tokens. Frontend Dev will replace. */
+:root{--bg:#0a0e1a;--surface:#121829;--line:#1f2840;--text:#e8ecf5;--muted:#8a94ad;--accent:#0082fa;--accent-2:#00c2ff;--radius:12px}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,sans-serif;line-height:1.5}
+a{color:var(--accent-2)}a[aria-disabled=true]{opacity:.4;pointer-events:none}
+.wrap{max-width:880px;margin:0 auto;padding:48px 20px}.hero h1{font-size:clamp(2rem,5vw,3.2rem);margin:0 0 8px;line-height:1.1}
+.muted{color:var(--muted);margin:4px 0}.small{font-size:.85rem}.row{display:flex;flex-wrap:wrap;gap:8px}.section{margin-top:40px}
+.chip{background:var(--surface);color:var(--text);border:1px solid var(--line);border-radius:999px;padding:8px 14px;cursor:pointer}
+.chip.on{background:var(--accent);border-color:var(--accent)}.cards{display:flex;flex-direction:column;gap:12px;margin-top:24px}
+.card{display:flex;gap:16px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px}
+.logo{width:44px;height:44px;border-radius:10px;background:var(--line);display:grid;place-items:center;font-weight:700}
+.grow{flex:1}.card h3{margin:0}.meta{font-size:.85rem;color:var(--muted);margin:0}
+.tag{font-size:.7rem;color:#f5b74a;border:1px solid #f5b74a55;border-radius:6px;padding:1px 6px;margin-left:6px}
+.actions{display:flex;flex-direction:column;gap:6px}.btn{background:var(--accent);color:#fff;text-decoration:none;padding:6px 12px;border-radius:8px;text-align:center;font-size:.9rem}
+.btn:active{transform:scale(.98)}.btn.ghost{background:transparent;border:1px solid var(--line);color:var(--text)}
+.steps{list-style:none;padding:0;display:flex;flex-direction:column;gap:12px}.steps li{display:flex;gap:12px}
+.num{width:28px;height:28px;border-radius:50%;background:var(--accent);display:grid;place-items:center;flex-shrink:0}
+.safety{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px}
+.footer{margin-top:56px;padding-top:24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+@media(max-width:560px){.card{flex-wrap:wrap}.actions{flex-direction:row;width:100%}}
