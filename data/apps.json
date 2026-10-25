@@ -134,7 +134,8 @@
     "gasInj": 0.01,
     "url": "https://noxapp.pro/",
     "verified": true,
-    "watchUrl": null
+    "watchUrl": null,
+    "crest": "/crests/nox-crest.png"
   },
   {
     "id": "renzu",
@@ -152,7 +153,8 @@
     "gasInj": 0,
     "url": "https://renzu.xyz/",
     "verified": true,
-    "watchUrl": null
+    "watchUrl": null,
+    "crest": "/crests/renzu-crest.png"
   },
   {
     "id": "talis",
@@ -170,6 +172,7 @@
     "gasInj": 0.013,
     "url": "https://injective.talis.art/",
     "verified": true,
-    "watchUrl": null
+    "watchUrl": null,
+    "crest": "/crests/talis-crest.png"
   }
 ]
