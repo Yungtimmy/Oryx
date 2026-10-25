@@ -6,7 +6,7 @@ import { CURRENCIES, Currency, gasLabel } from "@/lib/currency";
 
 const steps = [["Get a wallet","Keplr or Leap on mobile or desktop"],["Fund it","Bridge or buy a little INJ"],["Open a first dApp","Start with Helix"],["Cash out via Injara","INJ to naira in Telegram"]];
 // TODO: confirm official URLs before enabling.
-const footer: [string, [string, string | null][]][] = [["Cash out",[["Injara",null]]],["Bots",[["InjpulseBot",null]]],["Community",[["Injective Africa Telegram",null],["Discord",null]]]];
+const footer: [string, [string, string | null][]][] = [["Cash out",[["Injara community","https://t.me/injaratg"]]],["Bots",[["InjpulseBot",null]]],["Community",[["Injective Africa Telegram",null],["Discord",null]]]];
 const L = ({ href, children, className }: { href: string | null; children: React.ReactNode; className?: string }) =>
   href ? <a className={className} href={href} target="_blank" rel="noopener noreferrer">{children}</a>
        : <a className={className} aria-disabled="true" title="Link not confirmed yet">{children}</a>;
