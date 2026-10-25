@@ -54,7 +54,7 @@ export default function Directory() {
         const [rc, rl] = RANK[a.difficulty];
         return (<article key={a.id} className={`mission${open ? "" : " locked"}${done ? " cleared" : ""}`}>
           <div className="mission-rail">
-            <div className="crest"><b>{a.initial}</b></div>
+            <div className="crest"><b>{a.crest ? <img src={a.crest} alt={`${a.name} logo`} width={52} height={60} loading="lazy" /> : a.initial}</b></div>
             <div className={`seal ${rc}`} aria-label={`Rank ${rl}`}><i><span>RANK<strong>{rl}</strong></span></i></div>
           </div>
           <div className="mission-body">

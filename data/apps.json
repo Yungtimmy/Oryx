@@ -16,7 +16,8 @@
     "gasInj": 0.01,
     "url": "https://helixapp.com",
     "verified": true,
-    "watchUrl": null
+    "watchUrl": null,
+    "crest": "/crests/helix-crest.png"
   },
   {
     "id": "sprout",
@@ -35,7 +36,8 @@
     "gasInj": 0.008,
     "url": "https://sprout.fun",
     "verified": true,
-    "watchUrl": "/videos/sprout-tutorial-16x9-v2.mp4"
+    "watchUrl": "/videos/sprout-tutorial-16x9-v2.mp4",
+    "crest": "/crests/sprout-crest.png"
   },
   {
     "id": "runup",
@@ -54,7 +56,8 @@
     "gasInj": 0.02,
     "url": "https://runup.fun",
     "verified": true,
-    "watchUrl": null
+    "watchUrl": null,
+    "crest": "/crests/runup-crest.png"
   },
   {
     "id": "hydro",
@@ -73,7 +76,8 @@
     "gasInj": 0.015,
     "url": "https://app.hydroprotocol.finance/",
     "verified": true,
-    "watchUrl": null
+    "watchUrl": null,
+    "crest": "/crests/hydro-crest.png"
   },
   {
     "id": "injara",
@@ -92,6 +96,7 @@
     "url": null,
     "verified": false,
     "watchUrl": null,
-    "note": "Bot username unconfirmed. Keep locked."
+    "note": "Bot username unconfirmed. Keep locked.",
+    "crest": "/crests/injara-crest.png"
   }
 ]
